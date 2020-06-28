@@ -1,0 +1,5 @@
+Number,Stimuli,Procedure,Condition Description,Condition Notes
+1,versionA_stim.csv,READVersionA.csv,Read Version A,"Relational, read only version A"
+2,versionA_stim.csv,READVersionB.csv,Read Version B,"Relational, read only version B"
+3,versionC_stim.csv,READVersionC.csv,Read Version C,"Relational, read only version C"
+4,versionC_stim.csv,READVersionD.csv,Read Version D,"Relational, read only version D"

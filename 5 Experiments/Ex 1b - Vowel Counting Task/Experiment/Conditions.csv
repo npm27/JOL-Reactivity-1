@@ -1,0 +1,5 @@
+Number,Stimuli,Procedure,Condition Description,Condition Notes
+1,versionA_stim.csv,VC_VersionA.csv,Version A,Version A
+2,versionA_stim.csv,VC_VersionB.csv,Version B,Version B
+3,versionC_stim.csv,VC_VersionC.csv,Version C,Version C
+4,versionC_stim.csv,VC_VersionD.csv,Version D,Version D
