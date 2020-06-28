@@ -1,0 +1,13 @@
+Direction,Task,Average,Upper,Lower
+B,JOL,35.45,41.97,28.93
+F,JOL,72.58,77.78,67.38
+S,JOL,62.9,69.11,56.69
+U,JOL,17.6,24.75,10.44
+B,Frequency,31.31,37.83,24.78
+F,Frequency,66.56,71.76,61.36
+S,Frequency,62.03,68.24,55.81
+U,Frequency,13.33,20.48,6.18
+B,Study,23.01,28.61,17.41
+F,Study,49.42,55.71,43.13
+S,Study,43.27,49.33,37.21
+U,Study,14.94,19.03,10.84
