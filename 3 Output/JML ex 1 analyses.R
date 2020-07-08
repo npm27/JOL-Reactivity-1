@@ -274,7 +274,7 @@ model2 #significant everything!
 model2$ANOVA$MSE = model2$ANOVA$SSd/model2$ANOVA$DFd
 model2$ANOVA$MSE
 
-###post-hocs here
+####Reactivity Post-hocs####
 ##Get means
 #Main effect of task
 tapply(reactivity_data$Recall_Score, reactivity_data$Task, mean)
