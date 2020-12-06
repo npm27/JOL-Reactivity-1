@@ -87,6 +87,7 @@ apply(long.read[ , -1], 2, mean)
 
 ####ANOVA####
 library(ez)
+library(psychReport)
 
 ##Get the data in the right format
 JAM$Encoding = rep("JAM")
@@ -103,6 +104,7 @@ model1 = ezANOVA(combined,
                  within = Direction,
                  between = Encoding,
                  type = 3,
+                 return_aov = T,
                  detailed = T)
 model1
 
@@ -110,10 +112,48 @@ model1
 model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
 model1$ANOVA$MSE
 
+aovEffectSize(model1, effectSize = "pes")
+
 ##Post-hocs
-t.test(long.read$B, long.JOL$B, paired = F, p.adjust.methods = "none")
+t.test(long.read$B, long.JOL$B, paired = F, p.adjust.methods = "none", var.equal = T)
+
+##main effect of pair type
+
+##main effect of encoding group
+
+##interaction
 
 ##Write subject level to csv
 #write.csv(long.read, file = "READ2.csv", row.names = F)
 #write.csv(long.JAM, file = "JAM2.csv", row.names = F)
 #write.csv(long.JOL, file = "JOL2.csv", row.names = F)
+
+####Illusion of competence####
+JOL2 = JOL[ , c(2, 8, 10, 15)]
+
+IOC = melt(JOL2, measure.vars = c("Response.JOL", "Scored"))
+
+colnames(IOC)[3:4] = c("Task", "Score")
+
+IOC = na.omit(IOC)
+
+model2 = ezANOVA(IOC,
+                 dv = Score,
+                 wid = Sub.ID,
+                 within = .(Task, Direction),
+                 type = 3,
+                 return_aov = T,
+                 detailed = T)
+
+model2$ANOVA$MSE = model2$ANOVA$SSd/model2$ANOVA$DFd
+
+aovEffectSize(model2, effectSize = "pes")
+
+model2
+
+##Get means for effects
+tapply(IOC$Score, IOC$Direction, mean)
+tapply(IOC$Score, IOC$Task, mean)
+tapply(IOC$Score, list(IOC$Task, IOC$Direction), mean)
+
+####IOC Posthocs####
