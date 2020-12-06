@@ -114,19 +114,227 @@ model1$ANOVA$MSE
 
 aovEffectSize(model1, effectSize = "pes")
 
-##Post-hocs
+##Post-hocs -- 3way
 t.test(long.read$B, long.JOL$B, paired = F, p.adjust.methods = "none", var.equal = T)
 
+##Forward
+temp = t.test(long.JOL$F, long.JAM$F, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##effect size
+mean(long.JAM$F);mean(long.read$F)
+sd(long.JAM$F);sd(long.read$F)
+
+##pbic
+pbic1 = long.JAM[ , c(1, 3)]
+pbic2 = long.JOL[ , c(1, 3)]
+
+pbic1$task = rep("JAM")
+pbic2$task = rep("JOL")
+
+pbic3 = rbind(pbic1, pbic2)
+
+model = ezANOVA(pbic3,
+                wid = Sub.ID,
+                between = task,
+                dv = F,
+                detailed = T,
+                type = 3)
+
+model
+
+##symmetrical
+temp = t.test(long.JOL$S, long.read$S, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##eff size
+mean(long.JOL$S);mean(long.read$S)
+sd(long.JOL$S);sd(long.read$S)
+
+temp = t.test(long.JOL$S, long.JAM$S, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##pbic
+pbic1 = long.JAM[ , c(1, 4)]
+pbic2 = long.JOL[ , c(1, 4)]
+
+pbic1$task = rep("JAM")
+pbic2$task = rep("JOL")
+
+pbic3 = rbind(pbic1, pbic2)
+
+model = ezANOVA(pbic3,
+                wid = Sub.ID,
+                between = task,
+                dv = S,
+                detailed = T,
+                type = 3)
+
+model
+
+##backward
+temp = t.test(long.JOL$B, long.JAM$B, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+temp = t.test(long.JOL$B, long.read$B, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##eff size
+mean(long.JOL$B);mean(long.read$B)
+sd(long.JOL$B);sd(long.read$B)
+
+temp = t.test(long.JAM$B, long.read$B, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##EFF SIZE
+mean(long.JAM$B);mean(long.read$B)
+sd(long.JAM$B);sd(long.read$B)
+
+##pbics
+pbic1 = long.JAM[ , c(1, 2)]
+pbic2 = long.JOL[ , c(1, 2)]
+pbic4 = long.read[ , c(1, 2)]
+
+pbic1$task = rep("JAM")
+pbic2$task = rep("JOL")
+pbic4$task = rep("read")
+
+pbic3 = rbind(pbic1, pbic2)
+
+model = ezANOVA(pbic3,
+                wid = Sub.ID,
+                between = task,
+                dv = B,
+                detailed = T,
+                type = 3)
+
+model
+
+pbic5 = rbind(pbic2, pbic4)
+
+model = ezANOVA(pbic5,
+                wid = Sub.ID,
+                between = task,
+                dv = B,
+                detailed = T,
+                type = 3)
+
+model
+
+##Unrelated
+temp = t.test(long.JOL$U, long.read$U, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##PBIC
+pbic1 = long.JAM[ , c(1, 5)]
+pbic2 = long.JOL[ , c(1, 5)]
+pbic4 = long.read[ , c(1, 5)]
+
+pbic1$task = rep("JAM")
+pbic2$task = rep("JOL")
+pbic4$task = rep("read")
+
+pbic5 = rbind(pbic2, pbic4)
+
+model = ezANOVA(pbic5,
+                wid = Sub.ID,
+                between = task,
+                dv = U,
+                detailed = T,
+                type = 3)
+
+model
+
 ##main effect of pair type
+tapply(combined$Scored, combined$Direction, mean)
 
 ##main effect of encoding group
+tapply(combined$Scored, combined$Encoding, mean)
 
 ##interaction
+tapply(combined$Scored, list(combined$Encoding, combined$Direction), mean)
 
 ##Write subject level to csv
 #write.csv(long.read, file = "READ2.csv", row.names = F)
 #write.csv(long.JAM, file = "JAM2.csv", row.names = F)
 #write.csv(long.JOL, file = "JOL2.csv", row.names = F)
+
+combined = combined[ , c(1, 2, 4, 3)]
+
+##Do post-hoc testing
+#Direction
+reactivity.direction = cast(combined, Sub.ID ~ Direction, mean)
+
+temp = t.test(reactivity.direction$F, reactivity.direction$S, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(reactivity.direction$F); mean(reactivity.direction$S)
+sd(reactivity.direction$F); sd(reactivity.direction$S)
+
+#Encoding
+reactivity.encoding = cast(combined, Sub.ID ~ Encoding, mean)
+
+temp = t.test(reactivity.encoding$JAM, reactivity.encoding$Read, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(reactivity.encoding$JAM, na.rm = T); mean(reactivity.encoding$Read, na.rm = T)
+sd(reactivity.encoding$JAM, na.rm = T); sd(reactivity.encoding$Read, na.rm = T)
+
+temp = t.test(reactivity.encoding$JAM, reactivity.encoding$JOL, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+##Get pbic
+pbic1 = reactivity.encoding[ , c(1, 2)]
+pbic2 = reactivity.encoding[ , c(1, 3)]
+
+colnames(pbic1)[2] = "Score"
+colnames(pbic2)[2] = "Score"
+
+pbic1$task = rep("JOL")
+pbic2$task = rep("JAM")
+
+pbic3 = rbind(pbic1, pbic2)
+
+pbic3 = na.omit(pbic3)
+
+model = ezANOVA(pbic3,
+                wid = Sub.ID,
+                between = task,
+                dv = Score,
+                detailed = T,
+                type = 3)
+
+model
 
 ####Illusion of competence####
 JOL2 = JOL[ , c(2, 8, 10, 15)]
@@ -157,3 +365,73 @@ tapply(IOC$Score, IOC$Task, mean)
 tapply(IOC$Score, list(IOC$Task, IOC$Direction), mean)
 
 ####IOC Posthocs####
+##Direction
+IOC_direction = cast(IOC, Sub.ID ~ Direction, mean)
+
+temp = t.test(IOC_direction$F, IOC_direction$S, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(IOC_direction$F); mean(IOC_direction$S)
+sd(IOC_direction$F); sd(IOC_direction$S)
+
+##interaction
+unique(IOC$Task)
+
+IOC_JOLs = subset(IOC, IOC$Task == "Response.JOL")
+IOC_Recall = subset(IOC, IOC$Task == "Scored")
+
+IOC_JOLs2 = cast(IOC_JOLs, Sub.ID ~ Direction, mean)
+IOC_Recall2 = cast(IOC_Recall, Sub.ID ~ Direction, mean)
+
+temp = t.test(IOC_JOLs2$F, IOC_Recall2$F, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+temp = t.test(IOC_JOLs2$B, IOC_Recall2$B, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(IOC_JOLs2$B); mean(IOC_Recall2$B)
+sd(IOC_JOLs2$B); sd(IOC_Recall2$B)
+
+temp = t.test(IOC_JOLs2$S, IOC_Recall2$S, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(IOC_JOLs2$S); mean(IOC_Recall2$S)
+sd(IOC_JOLs2$S); sd(IOC_Recall2$S)
+
+temp = t.test(IOC_JOLs2$U, IOC_Recall2$U, paired = T, p.adjust.methods = "Bonferroni")
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(IOC_JOLs2$U); mean(IOC_Recall2$U)
+sd(IOC_JOLs2$U); sd(IOC_Recall2$U)
+
+##Get pbic for forward pairs
+pbic1 = IOC_JOLs2[ , c(1, 3)]
+pbic2 = IOC_Recall2[ , c(1, 3)]
+
+pbic1$task = rep("JOL")
+pbic2$task = rep("Recall")
+
+pbic3 = rbind(pbic1, pbic2)
+
+model = ezANOVA(pbic3,
+                wid = Sub.ID,
+                dv = F,
+                within = task,
+                detailed = T,
+                type = 3)
+model
