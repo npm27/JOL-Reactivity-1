@@ -210,12 +210,49 @@ sd(long.JAM$B);sd(long.read$B)
 
 ##Effect size for table
 ##Jams
-apply(long.JAM, 2, mean)
+y = apply(long.JAM, 2, mean)
 apply(long.JAM, 2, sd)
+x = apply(long.JAM, 2, sd) 
+
+x2 = x / sqrt(length(unique(long.JAM$Sub.ID)))
+x3 = x2 * 1.96
+
+upper = y + x3
+lower = y - x3
+
+upper
+lower
 
 #CONTROL
 apply(long.read, 2, mean)
 apply(long.read, 2, sd)
+
+y = apply(long.read, 2, mean)
+apply(long.read, 2, sd)
+x = apply(long.read, 2, sd) 
+
+x2 = x / sqrt(length(unique(long.read$Sub.ID)))
+x3 = x2 * 1.96
+
+upper = y + x3
+lower = y - x3
+
+upper
+lower
+
+##JOL
+y = apply(long.JOL, 2, mean)
+apply(long.JOL, 2, sd)
+x = apply(long.JOL, 2, sd) 
+
+x2 = x / sqrt(length(unique(long.JOL$Sub.ID)))
+x3 = x2 * 1.96
+
+upper = y + x3
+lower = y - x3
+
+upper
+lower
 
 ##pbics
 pbic1 = long.JAM[ , c(1, 2)]
@@ -434,6 +471,20 @@ sd(IOC_JOLs2$U); sd(IOC_Recall2$U)
 #Get means and sds for eff size
 apply(IOC_JOLs2, 2, mean)
 apply(IOC_JOLs2, 2, sd)
+
+##Get it means and CIs for fig
+y = apply(IOC_JOLs2, 2, mean)
+apply(IOC_JOLs2, 2, sd)
+x = apply(IOC_JOLs2, 2, sd) 
+
+x2 = x / sqrt(length(unique(IOC_JOLs2$Sub.ID)))
+x3 = x2 * 1.96
+
+upper = y + x3
+lower = y - x3
+
+upper
+lower
 
 ##Do it again for recall
 apply(IOC_Recall2, 2, mean)
