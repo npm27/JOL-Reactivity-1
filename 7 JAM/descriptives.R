@@ -198,15 +198,24 @@ temp
 mean(long.JOL$B);mean(long.read$B)
 sd(long.JOL$B);sd(long.read$B)
 
-temp = t.test(long.JAM$B, long.read$B, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+temp = t.test(long.read$F, long.read$S, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
 p = round(temp$p.value, 3)
 t = temp$statistic
 SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 temp
 
-##EFF SIZE
+##EFF SIZE 
 mean(long.JAM$B);mean(long.read$B)
 sd(long.JAM$B);sd(long.read$B)
+
+##Effect size for table
+##Jams
+apply(long.JAM, 2, mean)
+apply(long.JAM, 2, sd)
+
+#CONTROL
+apply(long.read, 2, mean)
+apply(long.read, 2, sd)
 
 ##pbics
 pbic1 = long.JAM[ , c(1, 2)]
@@ -418,6 +427,17 @@ temp
 
 mean(IOC_JOLs2$U); mean(IOC_Recall2$U)
 sd(IOC_JOLs2$U); sd(IOC_Recall2$U)
+
+##Get CIs for table
+(apply(IOC_JOLs2, 2, sd) / sqrt(length(unique(IOC_JOLs$Sub.ID)))) * 1.96
+
+#Get means and sds for eff size
+apply(IOC_JOLs2, 2, mean)
+apply(IOC_JOLs2, 2, sd)
+
+##Do it again for recall
+apply(IOC_Recall2, 2, mean)
+apply(IOC_Recall2, 2, sd)
 
 ##Get pbic for forward pairs
 pbic1 = IOC_JOLs2[ , c(1, 3)]
