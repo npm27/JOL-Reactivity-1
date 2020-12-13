@@ -1,4 +1,4 @@
-####Ex 3 Reactivity Bar Chart####
+####Ex 4 Reactivity Bar Chart####
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,7 +45,7 @@ rects3 = ax1.bar(ind + width + .15, s1_average, width, yerr = s1_conf, capsize =
                 label = 'Read', align = "center")
 
 #Make the plot spiffy
-ax1.set_title('Experiment 3: JOLs vs Frequency vs Read', fontsize = 20, fontweight = 'bold')
+ax1.set_title('Experiment 4: JOLs vs Frequency vs Read', fontsize = 20, fontweight = 'bold')
 ax1.set_ylabel('Mean % Recall', fontsize = 18, fontweight = 'bold')
 ax1.set_xlabel('Direction', fontsize = 18, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
@@ -55,4 +55,4 @@ ax1.legend(fontsize = 16)
 ax1.set_ylim([0,100])
 
 ##save figure
-fig.savefig('EX3_chart.png', dip = 10000)
+#fig.savefig('EX4_chart.png', dip = 10000)
