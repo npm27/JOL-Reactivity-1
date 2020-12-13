@@ -41,7 +41,7 @@ rects2 = ax1.bar(ind + width/2, r1_average, width, yerr = r1_conf, capsize = 3, 
                 label = 'Recall')
 
 #Make the plot spiffy
-ax1.set_title('Experiment 3: Illusion of Competence', fontsize = 20, fontweight = 'bold')
+ax1.set_title('Experiment 4: Illusion of Competence', fontsize = 20, fontweight = 'bold')
 ax1.set_ylabel('Mean % JOL/Recall', fontsize = 18, fontweight = 'bold')
 ax1.set_xlabel('Direction', fontsize = 18, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
@@ -82,7 +82,7 @@ rects3 = ax2.bar(ind + width + .15, s1_average, width, yerr = s1_conf, capsize =
                 label = 'No-JOL', align = "center")
 
 #Make the plot spiffy
-ax2.set_title('Experiment 3: Reactivity', fontsize = 20, fontweight = 'bold')
+ax2.set_title('Experiment 4: Reactivity', fontsize = 20, fontweight = 'bold')
 ax2.set_ylabel('Mean % Recall', fontsize = 18, fontweight = 'bold')
 ax2.set_xlabel('Direction', fontsize = 18, fontweight = 'bold')
 #ax1.xaxis.labelpad = 0
@@ -92,4 +92,4 @@ ax2.legend(fontsize = 16)
 ax2.set_ylim([0,100])
 
 ##save figure
-fig.savefig('EX3_chart.png', dip = 10000)
+fig.savefig('EX4_chart.png', dip = 10000)
