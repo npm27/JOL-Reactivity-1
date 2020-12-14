@@ -506,3 +506,70 @@ model = ezANOVA(pbic3,
                 detailed = T,
                 type = 3)
 model
+
+####Differences as a function of sample source####
+combined$key = substring(combined$Sub.ID, 1, 1)
+
+prolific =  subset(combined,
+                   combined$key == "5")
+sona = subset(combined,
+              combined$key != "5")
+
+table(prolific$Sub.ID)
+table(sona$Sub.ID)
+
+prolific$source = rep("prolific")
+sona$source = rep("sona")
+
+combined2 = rbind(prolific, sona)
+
+unique(prolific$Encoding)
+length(unique(prolific$Sub.ID))
+
+##get ns
+JAM_p = subset(prolific,
+               prolific$Encoding == "JAM")
+length(unique(JAM_p$Sub.ID)) #10
+
+JOL_p = subset(prolific,
+               prolific$Encoding == "JOL")
+length(unique(JOL_p$Sub.ID)) #11
+
+read_p = subset(prolific,
+                prolific$Encoding == "Read") 
+length(unique(read_p$Sub.ID)) #7
+
+##Get data in the right shape for t-tests
+prolific2 = cast(prolific[ , -c(5,6)], Sub.ID ~ Encoding, mean)
+sona2 = cast(sona[ , -c(5,6)], Sub.ID ~ Encoding, mean)
+
+##run some t tests
+#JAM
+temp = t.test(prolific2$JAM, sona2$JAM, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(prolific2$JAM, na.rm = T)
+mean(sona2$JAM, na.rm = T)
+
+#JOL
+temp = t.test(prolific2$JOL, sona2$JOL, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(prolific2$JOL, na.rm = T)
+mean(sona2$JOL, na.rm = T)
+
+#Control
+temp = t.test(prolific2$Read, sona2$Read, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+p = round(temp$p.value, 3)
+t = temp$statistic
+SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
+temp
+
+mean(prolific2$Read, na.rm = T)
+mean(sona2$Read, na.rm = T)
