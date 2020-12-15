@@ -9,6 +9,7 @@ Study = read.csv("Scored Output/Study2.csv")
 ##load libraries
 library(reshape)
 library(ez)
+library(psychReport)
 
 ####Data Screening####
 summary(JOL)
@@ -84,9 +85,11 @@ model1 = ezANOVA(Anova.data,
                  wid = Username,
                  dv = Recall_Score,
                  type = 3,
+                 return_aov = T,
                  detailed = TRUE)
 model1 ##Everything came out significant!
 
+aovEffectSize(model1, effectSize = "pes")
 
 ##Get MSE
 model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd

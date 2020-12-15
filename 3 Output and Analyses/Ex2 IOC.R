@@ -4,6 +4,7 @@ JOL = read.csv("Scored Output/JOL2.csv")
 ##load libraries
 library(reshape)
 library(ez)
+library(psychReport)
 
 colnames(JOL)[7] = "Direction"
 
@@ -29,6 +30,7 @@ model1 = ezANOVA(long.dat,
                  dv = Score,
                  within = .(Task, Direction),
                  wid = Username,
+                 return_aov = T,
                  type = 3,
                  detailed = T)
 model1
@@ -36,6 +38,9 @@ model1
 #Get MSE here
 model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
 model1$ANOVA$MSE
+
+##effect size
+aovEffectSize(model1, effectSize = "pes")
 
 ##Post hocs here
 IOC2 = cast(long.dat, Username ~ Direction, mean) #Main effect of Direction

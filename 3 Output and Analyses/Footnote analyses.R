@@ -41,6 +41,24 @@ round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 
 
+##get pbic
+s1$source = rep("sona")
+s2$source = rep("prolific")
+
+colnames(s1)[2] = "study"
+colnames(s2)[2] = "study"
+
+pbic = rbind(s1, s2)
+
+model = ezANOVA(pbic,
+                dv = study,
+                wid = Username,
+                between = source,
+                type = 3,
+                detailed = T)
+model
+
+
 ####Relational Counting####
 length(unique(RL$Username))
 
@@ -69,11 +87,25 @@ mean(r2$RL1)
 mean(r3$RL1)
 
 ##Run the t-test
-temp = t.test(r2$RL1, r3$RL1, paired = F)
+temp = t.test(r2$RL1, r3$RL1, paired = F, var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
-(temp$conf.int[2] - temp$conf.int[1]) / 3.92 
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92
+
+##get pbic
+pbic = rbind(r3, r2)
+
+length(unique(pbic$Username))
+
+model = ezANOVA(pbic,
+                dv = RL1,
+                wid = Username,
+                between = source,
+                type = 3,
+                detailed = T)
+model
+
 
 ####Now do Vowel Counting####
 length(unique(VC$Username))
@@ -108,3 +140,16 @@ temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 
+
+##Get pbics
+pbic = rbind(v3, v2)
+
+length(unique(pbic$Username))
+
+model = ezANOVA(pbic,
+                dv = VC1,
+                wid = Username,
+                between = source,
+                type = 3,
+                detailed = T)
+model

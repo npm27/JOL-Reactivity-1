@@ -7,6 +7,7 @@ Study = read.csv("Scored Output/Study3.csv")
 #Load libraries
 library(ez)
 library(reshape)
+library(psychReport)
 
 options(scipen = 999)
 
@@ -69,13 +70,13 @@ tapply(JOL1$Response.JOL, JOL1$Direction, mean)
 tapply(reactivity_data$Recall_Score, list(reactivity_data$Task, reactivity_data$Direction), mean)
 
 ##set up the IOC data
-colnames(JOL1)[3] = "JOL"
-colnames(JOL1)[4] = "Recall"
+colnames(JOL1)[4] = "JOL"
+colnames(JOL1)[5] = "Recall"
 
 IOC_data = melt(JOL1, measure.vars = c("JOL", "Recall"))
 
-colnames(IOC_data)[3] = "Task"
-colnames(IOC_data)[4] = "Score"
+colnames(IOC_data)[4] = "Task"
+colnames(IOC_data)[5] = "Score"
 
 length(unique(IOC_data$Username))
 
@@ -84,6 +85,7 @@ model1 = ezANOVA(data = IOC_data,
                  dv = Score,
                  wid = Username,
                  within = .(Direction, Task),
+                 return_aov = T,
                  type = 3,
                  detailed = T)
 model1 #IOC replicates
@@ -91,6 +93,8 @@ model1 #IOC replicates
 #Get MSE here
 model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
 model1$ANOVA$MSE
+
+aovEffectSize(model1, effectSize = "pes")
 
 ####Post Hocs####
 ##Get the means
@@ -302,7 +306,8 @@ model2 = ezANOVA(data = reactivity_data,
                  dv = Recall_Score,
                  wid = Username,
                  between = Task,
-                 within = .(Direction, Stimuli.Shuffle),
+                 return_aov = T,
+                 within = .(Direction),
                  type = 3,
                  detailed = T)
 model2 #significant everything!
@@ -312,6 +317,8 @@ length(unique(reactivity_data$Username))
 #get MSE here
 model2$ANOVA$MSE = model2$ANOVA$SSd/model2$ANOVA$DFd
 model2$ANOVA$MSE
+
+aovEffectSize(model2, effectSize = "pes")
 
 ###post-hocs here
 ##Get means

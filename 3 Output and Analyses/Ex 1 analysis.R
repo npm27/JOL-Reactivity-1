@@ -7,6 +7,7 @@ FREQ = read.csv("Scored Output/FREQ.csv")
 ##load libraries
 library(reshape)
 library(ez)
+library(psychReport)
 
 ####Data Screening####
 summary(JOL)
@@ -142,7 +143,8 @@ model1 = ezANOVA(data = anova.data1,
                  dv = Recall_Score,
                  wid = Username,
                  between = Task,
-                 within = .(Direction, Stimuli.Shuffle),
+                 within = .(Direction),
+                 return_aov = T,
                  detailed = T,
                  type = 3)
 
@@ -151,6 +153,8 @@ model1 #Everything is significant
 anovaLength = length(model1$ANOVA)
 model1$ANOVA$MSE = model1$ANOVA$SSd/model1$ANOVA$DFd
 model1$ANOVA$MSE
+
+aovEffectSize(model1, effectSize = "pes")
 
 #look at the means
 #tap1;tap2;tap3
