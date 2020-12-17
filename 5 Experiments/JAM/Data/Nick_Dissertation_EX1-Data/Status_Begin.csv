@@ -1,0 +1,108 @@
+Username,ID,Date,Session,Condition_Number,Condition_Description,Output_File,Stimuli_File,Procedure_File,Browser,DeviceType,OS,IP
+ddd,egeqmty1lv,2020-03-24T21:34:31+00:00,1,1,"Read Version A",Output_Session1_ddd_egeqmty1lv.csv,versionA_stim.csv,READVersionA.csv,"Firefox 74.0",Desktop,Win10,::1
+ddd,nadjruafik,2020-03-24T21:35:33+00:00,1,2,"Read Version B",Output_Session1_ddd_nadjruafik.csv,versionA_stim.csv,READVersionB.csv,"Firefox 74.0",Desktop,Win10,::1
+555,0hwfn76i50,2020-03-24T21:39:36+00:00,1,3,"Read Version C",Output_Session1_555_0hwfn76i50.csv,versionC_stim.csv,READVersionC.csv,"Firefox 74.0",Desktop,Win10,::1
+4545,8fqr0rhasq,2020-03-25T01:13:25+00:00,1,4,"Read Version D",Output_Session1_4545_8fqr0rhasq.csv,versionC_stim.csv,READVersionD.csv,"Firefox 74.0",Desktop,Win10,::1
+100,7rqwccirg8,2020-03-25T01:21:11+00:00,1,5,"JOL Version A",Output_Session1_100_7rqwccirg8.csv,versionA_stim.csv,JOLVersionA.csv,"Firefox 74.0",Desktop,Win10,::1
+ASDAF,1gujd9ypbm,2020-08-17T06:55:58-07:00,1,6,"JOL Version B",Output_Session1_ASDAF_1gujd9ypbm.csv,versionA_stim.csv,JOLVersionB.csv,"Firefox Generic",Desktop,Win10,73.2.192.199
+ADFADF,8ldfff38su,2020-08-17T06:56:11-07:00,1,7,"JOL Version C",Output_Session1_ADFADF_8ldfff38su.csv,versionC_stim.csv,JOLVersionC.csv,"Firefox Generic",Desktop,Win10,73.2.192.199
+Ddad,ivr4i5vq4b,2020-08-17T06:57:19-07:00,1,8,"JOL Version D",Output_Session1_Ddad_ivr4i5vq4b.csv,versionC_stim.csv,JOLVersionD.csv,"Firefox Generic",Desktop,Win10,73.2.192.199
+asdfaf,fr8epnwz90,2020-08-17T06:58:25-07:00,1,9,"JAM Version A",Output_Session1_asdfaf_fr8epnwz90.csv,versionA_stim.csv,JAMVersionA.csv,"Firefox Generic",Desktop,Win10,73.2.192.199
+w10056093C.G.,8ilgnem5mw,2020-08-17T08:51:20-07:00,1,10,"JAM Version B",Output_Session1_w10056093C.G._8ilgnem5mw.csv,versionA_stim.csv,JAMVersionB.csv,"Edge 84.0",Desktop,Win10,131.95.1.44
+w10068374CG,13la3l8qp7,2020-08-17T10:27:42-07:00,1,11,"JAM Version C",Output_Session1_w10068374CG_13la3l8qp7.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 84.0",Desktop,Win10,131.95.7.239
+w10022351_jam,csfpk7whub,2020-08-17T11:17:39-07:00,1,12,"JAM Version D",Output_Session1_w10022351_jam_csfpk7whub.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome 84.0",Desktop,Win10,131.95.7.253
+w980000_lf,5iqf61ok6f,2020-08-17T11:36:46-07:00,1,1,"Read Version A",Output_Session1_w980000_lf_5iqf61ok6f.csv,versionA_stim.csv,READVersionA.csv,"Edge 18.0",Desktop,Win10,75.64.28.3
+w10065817_CEB,esbt7ntuf0,2020-08-17T13:00:22-07:00,1,2,"Read Version B",Output_Session1_w10065817_CEB_esbt7ntuf0.csv,versionA_stim.csv,READVersionB.csv,"Mobile Safari Generic",Tablet,iOS,131.95.7.245
+w10065817_CEB,opx3i7by7w,2020-08-17T13:03:27-07:00,1,3,"Read Version C",Output_Session1_w10065817_CEB_opx3i7by7w.csv,versionC_stim.csv,READVersionC.csv,"Mobile Safari Generic",Tablet,iOS,131.95.7.245
+w10089076_AG,dn2tw7qhld,2020-08-17T13:06:07-07:00,1,4,"Read Version D",Output_Session1_w10089076_AG_dn2tw7qhld.csv,versionC_stim.csv,READVersionD.csv,"Chrome 84.0",Desktop,Win10,131.95.7.252
+w995669_AML,7y573dzooc,2020-08-17T14:27:40-07:00,1,5,"JOL Version A",Output_Session1_w995669_AML_7y573dzooc.csv,versionA_stim.csv,JOLVersionA.csv,"Chrome 84.0",Desktop,Win10,73.203.232.52
+w10030814_cms,y9j7oel6i2,2020-08-17T14:39:23-07:00,1,6,"JOL Version B",Output_Session1_w10030814_cms_y9j7oel6i2.csv,versionA_stim.csv,JOLVersionB.csv,"Safari Generic",Desktop,MacOSX,131.95.7.244
+905158TA,onvx4hul36,2020-08-18T11:49:25-07:00,1,7,"JOL Version C",Output_Session1_905158TA_onvx4hul36.csv,versionC_stim.csv,JOLVersionC.csv,"Safari 12.1",Desktop,MacOSX,73.2.215.218
+905158TA,owhcr7ur6j,2020-08-18T12:05:08-07:00,1,8,"JOL Version D",Output_Session1_905158TA_owhcr7ur6j.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 84.0",Desktop,Win7,73.2.215.218
+w10079495,mvyn9hg6t7,2020-08-18T12:28:33-07:00,1,9,"JAM Version A",Output_Session1_w10079495_mvyn9hg6t7.csv,versionA_stim.csv,JAMVersionA.csv,"Chrome 84.0",Desktop,Win10,131.95.7.241
+w100181550LKD,kvo6hdes9g,2020-08-18T17:28:31-07:00,1,10,"JAM Version B",Output_Session1_w100181550LKD_kvo6hdes9g.csv,versionA_stim.csv,JAMVersionB.csv,DefaultProperties,unknown,unknown,72.173.137.109
+w10048422AB,bes7sqds8b,2020-08-18T17:49:05-07:00,1,11,"JAM Version C",Output_Session1_w10048422AB_bes7sqds8b.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 84.0",Desktop,MacOSX,131.95.7.247
+w10059358_arw,rretvymjj3,2020-08-18T20:09:45-07:00,1,12,"JAM Version D",Output_Session1_w10059358_arw_rretvymjj3.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome 84.0",Desktop,Win10,131.95.1.44
+W10106164HPR,qjhh35oz5s,2020-08-19T09:14:34-07:00,1,1,"Read Version A",Output_Session1_W10106164HPR_qjhh35oz5s.csv,versionA_stim.csv,READVersionA.csv,"Chrome 84.0",Desktop,Win10,12.221.241.146
+10084195jh,nlmr0t3ap4,2020-08-19T14:28:44-07:00,1,2,"Read Version B",Output_Session1_10084195jh_nlmr0t3ap4.csv,versionA_stim.csv,READVersionB.csv,"Edge 18.0",Desktop,Win10,131.95.7.253
+w934494_APK,vzhb7wv7na,2020-08-19T23:45:04-07:00,1,3,"Read Version C",Output_Session1_w934494_APK_vzhb7wv7na.csv,versionC_stim.csv,READVersionC.csv,"Chrome 84.0",Desktop,MacOSX,73.2.213.85
+w10043024,tt3ocznl5l,2020-08-20T11:18:52-07:00,1,4,"Read Version D",Output_Session1_w10043024_tt3ocznl5l.csv,versionC_stim.csv,READVersionD.csv,"Safari Generic",Desktop,MacOSX,131.95.7.252
+w10046977_ajg,aq48tebm4r,2020-08-20T12:46:55-07:00,1,5,"JOL Version A",Output_Session1_w10046977_ajg_aq48tebm4r.csv,versionA_stim.csv,JOLVersionA.csv,"Chrome 84.0",Desktop,MacOSX,131.95.7.239
+w10013081,xedqvq5mon,2020-08-21T21:13:22-07:00,1,6,"JOL Version B",Output_Session1_w10013081_xedqvq5mon.csv,versionA_stim.csv,JOLVersionB.csv,"Firefox Generic",Desktop,Win10,67.142.112.134
+w10062352_bow,vys7miuxjh,2020-08-22T16:21:27-07:00,1,7,"JOL Version C",Output_Session1_w10062352_bow_vys7miuxjh.csv,versionC_stim.csv,JOLVersionC.csv,"Chrome 81.0",Desktop,MacOSX,162.224.109.193
+w10037861HE,rw93gulkn3,2020-08-23T16:03:54-07:00,1,8,"JOL Version D",Output_Session1_w10037861HE_rw93gulkn3.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 84.0",Desktop,MacOSX,131.95.7.103
+w10084964EB,zboybq7x0f,2020-08-23T19:19:51-07:00,1,9,"JAM Version A",Output_Session1_w10084964EB_zboybq7x0f.csv,versionA_stim.csv,JAMVersionA.csv,"Chrome 84.0",Desktop,Win10,131.95.7.246
+w10068593_SLL,if0bsk3fm7,2020-08-24T16:03:40-07:00,1,10,"JAM Version B",Output_Session1_w10068593_SLL_if0bsk3fm7.csv,versionA_stim.csv,JAMVersionB.csv,DefaultProperties,unknown,unknown,131.95.7.245
+w100547_HRO,rpdvw5ogfu,2020-08-25T09:57:06-07:00,1,11,"JAM Version C",Output_Session1_w100547_HRO_rpdvw5ogfu.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 84.0",Desktop,Win10,131.95.7.252
+w10088462_kb,wxkjfdbcjm,2020-08-26T12:58:14-07:00,1,12,"JAM Version D",Output_Session1_w10088462_kb_wxkjfdbcjm.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome 84.0",Desktop,Win10,173.21.117.73
+w10096966,djo4tnwx70,2020-08-27T10:32:03-07:00,1,1,"Read Version A",Output_Session1_w10096966_djo4tnwx70.csv,versionA_stim.csv,READVersionA.csv,"Chrome 84.0",Desktop,Win10,69.223.57.82
+982346DJ,fd2iyxikvm,2020-08-27T10:51:09-07:00,1,2,"Read Version B",Output_Session1_982346DJ_fd2iyxikvm.csv,versionA_stim.csv,READVersionB.csv,"Firefox Generic",Desktop,Win7,131.95.1.83
+w535119_jll,9ow3oocti8,2020-08-29T16:25:54-07:00,1,3,"Read Version C",Output_Session1_w535119_jll_9ow3oocti8.csv,versionC_stim.csv,READVersionC.csv,"Edge 84.0",Desktop,Win10,174.235.135.120
+w10039584_msc,uglhrbajv3,2020-08-30T16:17:12-07:00,1,4,"Read Version D",Output_Session1_w10039584_msc_uglhrbajv3.csv,versionC_stim.csv,READVersionD.csv,"Chrome 84.0",Desktop,Win10,50.86.52.228
+w10036134AN,ea1n15sqdc,2020-08-31T18:15:39-07:00,1,5,"JOL Version A",Output_Session1_w10036134AN_ea1n15sqdc.csv,versionA_stim.csv,JOLVersionA.csv,"Chrome 85.0",Desktop,Win10,131.95.7.247
+w10088466_kad,hyiaywoi9i,2020-09-02T19:37:30-07:00,1,6,"JOL Version B",Output_Session1_w10088466_kad_hyiaywoi9i.csv,versionA_stim.csv,JOLVersionB.csv,"Safari Generic",Desktop,MacOSX,131.95.7.245
+w10012551_ash,bvsaffp013,2020-09-05T09:16:46-07:00,1,7,"JOL Version C",Output_Session1_w10012551_ash_bvsaffp013.csv,versionC_stim.csv,JOLVersionC.csv,"Firefox Generic",Desktop,MacOSX,73.91.231.49
+w10021803mm,qotkxc9me9,2020-09-05T18:02:18-07:00,1,8,"JOL Version D",Output_Session1_w10021803mm_qotkxc9me9.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 85.0",Desktop,Win10,107.77.169.19
+w10059664CB,yrhopih0e7,2020-09-05T21:39:10-07:00,1,9,"JAM Version A",Output_Session1_w10059664CB_yrhopih0e7.csv,versionA_stim.csv,JAMVersionA.csv,"Mobile Safari Generic","Mobile Phone",iOS,174.240.134.39
+w10046000_clt,0dlnavum7m,2020-09-06T16:40:47-07:00,1,10,"JAM Version B",Output_Session1_w10046000_clt_0dlnavum7m.csv,versionA_stim.csv,JAMVersionB.csv,"Safari Generic",Desktop,MacOSX,50.86.54.10
+w10049766_AYN,nnamtajdia,2020-09-06T16:56:27-07:00,1,11,"JAM Version C",Output_Session1_w10049766_AYN_nnamtajdia.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 85.0",Desktop,Win10,71.15.40.31
+w10033012_TMB,0cqqkplzht,2020-09-08T10:50:44-07:00,1,12,"JAM Version D",Output_Session1_w10033012_TMB_0cqqkplzht.csv,versionC_stim.csv,JAMVersionD.csv,"Safari Generic",Desktop,MacOSX,23.127.147.153
+w10022439_mlr,t1wqv872d0,2020-09-08T17:02:56-07:00,1,1,"Read Version A",Output_Session1_w10022439_mlr_t1wqv872d0.csv,versionA_stim.csv,READVersionA.csv,"Safari Generic",Desktop,MacOSX,131.95.7.243
+w10082599_LD,u7x96q1nyv,2020-09-10T14:17:00-07:00,1,2,"Read Version B",Output_Session1_w10082599_LD_u7x96q1nyv.csv,versionA_stim.csv,READVersionB.csv,"Mobile Safari Generic","Mobile Phone",iOS,131.95.1.44
+w10050832_sgm,kckvjiaful,2020-09-11T22:12:07-07:00,1,3,"Read Version C",Output_Session1_w10050832_sgm_kckvjiaful.csv,versionC_stim.csv,READVersionC.csv,"Chrome 85.0",Desktop,Win10,71.195.222.203
+w10004245,g4n97f78gj,2020-09-12T16:36:38-07:00,1,4,"Read Version D",Output_Session1_w10004245_g4n97f78gj.csv,versionC_stim.csv,READVersionD.csv,"Chrome 85.0",Desktop,Win10,50.86.55.55
+w10045963_lnp,wdghf6klc3,2020-09-13T08:29:35-07:00,1,5,"JOL Version A",Output_Session1_w10045963_lnp_wdghf6klc3.csv,versionA_stim.csv,JOLVersionA.csv,"Chrome 85.0",Desktop,MacOSX,131.95.1.133
+w10019988_kh,e65qq6b69l,2020-09-14T13:14:41-07:00,1,6,"JOL Version B",Output_Session1_w10019988_kh_e65qq6b69l.csv,versionA_stim.csv,JOLVersionB.csv,"Chrome 85.0",Desktop,Win10,131.95.7.245
+w10004567_DNT,k954izcsqt,2020-09-14T17:25:34-07:00,1,7,"JOL Version C",Output_Session1_w10004567_DNT_k954izcsqt.csv,versionC_stim.csv,JOLVersionC.csv,"Chrome 85.0",Desktop,MacOSX,73.2.210.246
+w984273RS,xww1bzgwla,2020-09-15T11:16:41-07:00,1,8,"JOL Version D",Output_Session1_w984273RS_xww1bzgwla.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 85.0",Desktop,MacOSX,131.95.7.103
+w10103818,jrma3hjqpt,2020-09-15T17:28:32-07:00,1,9,"JAM Version A",Output_Session1_w10103818_jrma3hjqpt.csv,versionA_stim.csv,JAMVersionA.csv,"Safari Generic",Desktop,MacOSX,75.64.28.131
+w997000jy,rkwq8olarx,2020-09-18T14:13:33-07:00,1,10,"JAM Version B",Output_Session1_w997000jy_rkwq8olarx.csv,versionA_stim.csv,JAMVersionB.csv,"Safari Generic",Desktop,MacOSX,71.195.142.172
+w10059558_rch,5ksyq7l8wm,2020-09-19T12:51:52-07:00,1,11,"JAM Version C",Output_Session1_w10059558_rch_5ksyq7l8wm.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 85.0",Desktop,Win10,131.95.7.252
+w10013300MMC,qvpwq8lq40,2020-09-20T21:34:23-07:00,1,12,"JAM Version D",Output_Session1_w10013300MMC_qvpwq8lq40.csv,versionC_stim.csv,JAMVersionD.csv,"Safari Generic",Desktop,MacOSX,75.66.122.202
+w10030757JP,sf71upj9lw,2020-09-21T18:30:32-07:00,1,1,"Read Version A",Output_Session1_w10030757JP_sf71upj9lw.csv,versionA_stim.csv,READVersionA.csv,"Edge 85.0",Desktop,Win10,131.95.7.244
+10069503MDSA,ox0ruwx97y,2020-09-24T15:49:11-07:00,1,2,"Read Version B",Output_Session1_10069503MDSA_ox0ruwx97y.csv,versionA_stim.csv,READVersionB.csv,"Safari Generic",Desktop,MacOSX,69.246.48.222
+10104845FH,r1emwkx808,2020-09-27T08:45:27-07:00,1,3,"Read Version C",Output_Session1_10104845FH_r1emwkx808.csv,versionC_stim.csv,READVersionC.csv,"Chrome 85.0",Desktop,Win10,67.246.54.156
+w10064597TG,oecxybeny1,2020-09-28T08:05:12-07:00,1,4,"Read Version D",Output_Session1_w10064597TG_oecxybeny1.csv,versionC_stim.csv,READVersionD.csv,DefaultProperties,unknown,unknown,75.65.210.41
+w10044868_as,nz76255efx,2020-09-28T14:57:25-07:00,1,5,"JOL Version A",Output_Session1_w10044868_as_nz76255efx.csv,versionA_stim.csv,JOLVersionA.csv,"Safari Generic",Desktop,MacOSX,131.95.7.246
+w10044868_as,hnm9ynhli9,2020-09-28T14:57:54-07:00,1,6,"JOL Version B",Output_Session1_w10044868_as_hnm9ynhli9.csv,versionA_stim.csv,JOLVersionB.csv,"Safari Generic",Desktop,MacOSX,131.95.7.246
+w10044868_as,cszdg2jdh2,2020-09-28T14:58:47-07:00,1,7,"JOL Version C",Output_Session1_w10044868_as_cszdg2jdh2.csv,versionC_stim.csv,JOLVersionC.csv,"Safari Generic",Desktop,MacOSX,131.95.7.246
+w10044868_as,ssihuxm6ak,2020-09-28T14:59:52-07:00,1,8,"JOL Version D",Output_Session1_w10044868_as_ssihuxm6ak.csv,versionC_stim.csv,JOLVersionD.csv,"Safari Generic",Desktop,MacOSX,131.95.7.246
+w10071305_mkt,qfiu32gvcg,2020-09-28T18:49:55-07:00,1,9,"JAM Version A",Output_Session1_w10071305_mkt_qfiu32gvcg.csv,versionA_stim.csv,JAMVersionA.csv,"Edge 85.0",Desktop,Win10,131.95.7.243
+w10011881_dnd,zo29qz86em,2020-09-30T08:29:46-07:00,1,10,"JAM Version B",Output_Session1_w10011881_dnd_zo29qz86em.csv,versionA_stim.csv,JAMVersionB.csv,"Edge 85.0",Desktop,Win10,67.35.48.173
+w10029010,3uguohoh9g,2020-10-01T09:47:10-07:00,1,11,"JAM Version C",Output_Session1_w10029010_3uguohoh9g.csv,versionC_stim.csv,JAMVersionC.csv,"Chrome 85.0",Desktop,Win10,131.95.7.103
+w10065796_sjb,2j69kwr1hm,2020-10-01T18:37:52-07:00,1,12,"JAM Version D",Output_Session1_w10065796_sjb_2j69kwr1hm.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome 85.0",Desktop,MacOSX,131.95.7.253
+w10076541_mim,lz1xku94xr,2020-10-02T06:39:06-07:00,1,1,"Read Version A",Output_Session1_w10076541_mim_lz1xku94xr.csv,versionA_stim.csv,READVersionA.csv,"Safari Generic",Desktop,MacOSX,12.153.195.230
+10071305_mkt,6ph3bzrfyf,2020-10-02T10:22:11-07:00,1,2,"Read Version B",Output_Session1_10071305_mkt_6ph3bzrfyf.csv,versionA_stim.csv,READVersionB.csv,"Edge 85.0",Desktop,Win10,131.95.7.243
+w10082046_ac,pbg3wqcd9x,2020-10-02T13:26:57-07:00,1,3,"Read Version C",Output_Session1_w10082046_ac_pbg3wqcd9x.csv,versionC_stim.csv,READVersionC.csv,"Mobile Safari Generic","Mobile Phone",iOS,131.95.7.253
+w919795_nrb,75qidj0pa3,2020-10-02T17:00:01-07:00,1,4,"Read Version D",Output_Session1_w919795_nrb_75qidj0pa3.csv,versionC_stim.csv,READVersionD.csv,"Safari Generic",Desktop,MacOSX,68.234.167.178
+w10006036_mlh,4bh46mpg60,2020-10-02T17:23:44-07:00,1,5,"JOL Version A",Output_Session1_w10006036_mlh_4bh46mpg60.csv,versionA_stim.csv,JOLVersionA.csv,"Safari 10.1",Desktop,MacOSX,65.7.9.183
+334685WJ,h9lkz6d664,2020-10-03T15:12:32-07:00,1,6,"JOL Version B",Output_Session1_334685WJ_h9lkz6d664.csv,versionA_stim.csv,JOLVersionB.csv,"Chrome 85.0",Desktop,Win10,69.247.113.189
+w10037565TT,abu50hptkg,2020-10-03T17:15:52-07:00,1,7,"JOL Version C",Output_Session1_w10037565TT_abu50hptkg.csv,versionC_stim.csv,JOLVersionC.csv,"Edge 85.0",Desktop,Win10,131.95.1.135
+w10016442_mb,nh7n0lo4ni,2020-10-04T12:06:50-07:00,1,8,"JOL Version D",Output_Session1_w10016442_mb_nh7n0lo4ni.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 85.0",Desktop,MacOSX,107.77.94.86
+w10088817_XD,4xz6vcrirt,2020-10-05T17:55:08-07:00,1,9,"JAM Version A",Output_Session1_w10088817_XD_4xz6vcrirt.csv,versionA_stim.csv,JAMVersionA.csv,"Chrome 85.0",Desktop,Win10,131.95.7.242
+w10030825FS,bfjallmiq3,2020-10-05T19:20:17-07:00,1,10,"JAM Version B",Output_Session1_w10030825FS_bfjallmiq3.csv,versionA_stim.csv,JAMVersionB.csv,"Safari Generic",Desktop,MacOSX,131.95.7.243
+w10067540jer,zmxficnz89,2020-10-06T14:29:42-07:00,1,11,"JAM Version C",Output_Session1_w10067540jer_zmxficnz89.csv,versionC_stim.csv,JAMVersionC.csv,"Edge 85.0",Desktop,Win10,69.230.86.163
+977524rc,nybu72v5og,2020-10-06T20:01:04-07:00,1,12,"JAM Version D",Output_Session1_977524rc_nybu72v5og.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome 85.0",Desktop,MacOSX,73.5.72.222
+w10067789_JT,wi1lbwlvxt,2020-10-07T11:46:42-07:00,1,1,"Read Version A",Output_Session1_w10067789_JT_wi1lbwlvxt.csv,versionA_stim.csv,READVersionA.csv,"Safari Generic",Desktop,MacOSX,131.95.7.244
+w10085323,oa8fyu9hqw,2020-10-07T13:13:50-07:00,1,2,"Read Version B",Output_Session1_w10085323_oa8fyu9hqw.csv,versionA_stim.csv,READVersionB.csv,"Safari Generic",Desktop,MacOSX,67.60.15.182
+10032501AW,3ry13y8ww4,2020-10-07T15:25:51-07:00,1,3,"Read Version C",Output_Session1_10032501AW_3ry13y8ww4.csv,versionC_stim.csv,READVersionC.csv,"Chrome 84.0",Desktop,MacOSX,160.3.135.227
+w959252_kms,w550cyg4ao,2020-10-08T10:20:31-07:00,1,4,"Read Version D",Output_Session1_w959252_kms_w550cyg4ao.csv,versionC_stim.csv,READVersionD.csv,"Safari Generic",Desktop,MacOSX,207.229.101.225
+w10106212eb,gyn5yrzdor,2020-10-08T18:34:53-07:00,1,5,"JOL Version A",Output_Session1_w10106212eb_gyn5yrzdor.csv,versionA_stim.csv,JOLVersionA.csv,DefaultProperties,unknown,unknown,107.203.120.41
+w10106212EB,1saz5rxp0u,2020-10-08T18:41:22-07:00,1,6,"JOL Version B",Output_Session1_w10106212EB_1saz5rxp0u.csv,versionA_stim.csv,JOLVersionB.csv,DefaultProperties,unknown,unknown,107.203.120.41
+w10027292MK,pyt7nhnn8e,2020-10-10T15:31:50-07:00,1,7,"JOL Version C",Output_Session1_w10027292MK_pyt7nhnn8e.csv,versionC_stim.csv,JOLVersionC.csv,"Chrome 85.0",Desktop,MacOSX,69.212.42.95
+w10065682_amm,ncvtuh9i33,2020-10-10T16:55:49-07:00,1,8,"JOL Version D",Output_Session1_w10065682_amm_ncvtuh9i33.csv,versionC_stim.csv,JOLVersionD.csv,"Chrome 85.0",Desktop,MacOSX,131.95.7.246
+10077900LW,zlsg4ay7lf,2020-10-10T20:36:43-07:00,1,9,"JAM Version A",Output_Session1_10077900LW_zlsg4ay7lf.csv,versionA_stim.csv,JAMVersionA.csv,"Edge 85.0",Desktop,Win10,131.95.7.242
+w10069845,8psv62nms9,2020-10-10T22:04:38-07:00,1,10,"JAM Version B",Output_Session1_w10069845_8psv62nms9.csv,versionA_stim.csv,JAMVersionB.csv,"Chrome 85.0",Desktop,MacOSX,99.77.124.93
+w10104941_mrp,kubq9folo9,2020-10-11T14:02:34-07:00,1,11,"JAM Version C",Output_Session1_w10104941_mrp_kubq9folo9.csv,versionC_stim.csv,JAMVersionC.csv,DefaultProperties,unknown,unknown,45.24.168.238
+10064478oc,jnnw6fcx5j,2020-10-17T19:03:25-07:00,1,12,"JAM Version D",Output_Session1_10064478oc_jnnw6fcx5j.csv,versionC_stim.csv,JAMVersionD.csv,"Chrome Generic",Desktop,Win10,73.252.74.213
+10097621LS,1sv35ojuyy,2020-10-19T17:57:13-07:00,1,1,"Read Version A",Output_Session1_10097621LS_1sv35ojuyy.csv,versionA_stim.csv,READVersionA.csv,"Chrome Generic",Desktop,MacOSX,104.3.147.205
+w10077356JS,7zgcyotqkn,2020-10-21T12:46:34-07:00,1,2,"Read Version B",Output_Session1_w10077356JS_7zgcyotqkn.csv,versionA_stim.csv,READVersionB.csv,"Safari Generic",Desktop,MacOSX,107.77.90.33
+w10079099_msr,lum2656xuu,2020-10-22T06:04:57-07:00,1,3,"Read Version C",Output_Session1_w10079099_msr_lum2656xuu.csv,versionC_stim.csv,READVersionC.csv,"Safari Generic",Desktop,MacOSX,69.230.84.48
+w10098918_eks,eir1g0ez1f,2020-10-29T12:06:48-07:00,1,9,"JAM Version A",Output_Session1_w10098918_eks_eir1g0ez1f.csv,versionA_stim.csv,JAMVersionA.csv,"Firefox 64.0",Desktop,Linux,69.247.112.123
+w10093875CES,2ss52cul9s,2020-10-29T16:14:29-07:00,1,10,"JAM Version B",Output_Session1_w10093875CES_2ss52cul9s.csv,versionA_stim.csv,JAMVersionB.csv,"Edge Generic",Desktop,Win10,131.95.7.243
+10047038AM,e2drtigww1,2020-10-30T13:36:17-07:00,1,11,"JAM Version C",Output_Session1_10047038AM_e2drtigww1.csv,versionC_stim.csv,JAMVersionC.csv,"Safari Generic",Desktop,MacOSX,50.86.22.98
+w10040181_lb,gpi32doev1,2020-10-30T15:17:27-07:00,1,12,"JAM Version D",Output_Session1_w10040181_lb_gpi32doev1.csv,versionC_stim.csv,JAMVersionD.csv,"Mobile Safari Generic","Mobile Phone",iOS,50.86.54.230
+w218848BM,lvgly3ljxx,2020-10-31T14:12:36-07:00,1,9,"JAM Version A",Output_Session1_w218848BM_lvgly3ljxx.csv,versionA_stim.csv,JAMVersionA.csv,"Safari Generic",Desktop,MacOSX,50.86.50.57
+w10049640,06gaa5d6wn,2020-11-02T18:25:06-08:00,1,10,"JAM Version B",Output_Session1_w10049640_06gaa5d6wn.csv,versionA_stim.csv,JAMVersionB.csv,"Edge Generic",Desktop,Win10,173.235.118.68
+w10049640,5a65kyarkq,2020-11-04T11:23:04-08:00,1,11,"JAM Version C",Output_Session1_w10049640_5a65kyarkq.csv,versionC_stim.csv,JAMVersionC.csv,"Edge 86.0",Desktop,Win10,173.235.118.68
+w10065910_kb,zplycx6kb5,2020-11-05T17:14:15-08:00,1,12,"JAM Version D",Output_Session1_w10065910_kb_zplycx6kb5.csv,versionC_stim.csv,JAMVersionD.csv,"Edge 86.0",Desktop,Win10,76.107.94.187
