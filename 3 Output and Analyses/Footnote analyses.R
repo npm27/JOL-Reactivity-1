@@ -7,6 +7,7 @@ RL = read.csv("Scored Output/Study.RL.csv") ##Relational encoding
 VC = read.csv("Scored Output/VC.csv") ##vowel counting
 
 library(reshape)
+library(ez)
 
 ####NO-JOL####
 length(unique(Study$Username))
