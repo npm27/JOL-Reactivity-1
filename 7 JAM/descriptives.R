@@ -573,3 +573,38 @@ temp
 
 mean(prolific2$Read, na.rm = T)
 mean(sona2$Read, na.rm = T)
+
+##Get pbics
+pbic = prolific2[ , c(1, 3)]
+pbic2 = sona2[ , c(1, 3)]
+
+pbic$task = rep("prolific")
+pbic2$task = rep("sona")
+
+pbic3 = rbind(pbic, pbic2)
+
+pbic3 = na.omit(pbic3)
+
+ezANOVA(pbic3,
+        dv = JOL,
+        wid = Sub.ID,
+        between = task,
+        type = 3,
+        detailed = T)
+
+pbic = prolific2[ , c(1, 4)]
+pbic2 = sona2[ , c(1, 4)]
+
+pbic$task = rep("prolific")
+pbic2$task = rep("sona")
+
+pbic3 = rbind(pbic, pbic2)
+
+pbic3 = na.omit(pbic3)
+
+ezANOVA(pbic3,
+        dv = Read,
+        wid = Sub.ID,
+        between = task,
+        type = 3,
+        detailed = T)
