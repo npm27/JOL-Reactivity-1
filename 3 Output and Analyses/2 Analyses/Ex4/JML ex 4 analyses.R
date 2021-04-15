@@ -1,10 +1,10 @@
 ##This is the JML Ex 2 Analysis
 ####Set up####
 ##load in data
-JOL = read.csv("Scored Output/JOL2.csv")
-RL = read.csv("Scored Output/Study.RL.csv")
-VC = read.csv("Scored Output/VC.csv")
-Study = read.csv("Scored Output/Study2.csv")
+JOL = read.csv("JOL2.csv")
+RL = read.csv("Study.RL.csv")
+VC = read.csv("VC.csv")
+Study = read.csv("Study2.csv")
 
 ##load libraries
 library(reshape)

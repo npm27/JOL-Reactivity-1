@@ -1,8 +1,8 @@
 ####Set up####
 ##load in data
-JOL = read.csv("Scored Output/JOL.csv")
-Study = read.csv("Scored Output/Study.csv")
-FREQ = read.csv("Scored Output/FREQ.csv")
+JOL = read.csv("JOL.csv")
+Study = read.csv("Study.csv")
+FREQ = read.csv("FREQ.csv")
 
 ##load libraries
 library(reshape)

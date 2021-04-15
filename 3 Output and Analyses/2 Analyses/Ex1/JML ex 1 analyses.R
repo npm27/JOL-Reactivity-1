@@ -1,8 +1,8 @@
 ####JML EX 1 data####
 ##set up
 #Read in data
-JOL = read.csv("Scored Output/JOL3.csv")
-Study = read.csv("Scored Output/Study3.csv")
+JOL = read.csv("JOL3.csv")
+Study = read.csv("Study3.csv")
 
 #Load libraries
 library(ez)
