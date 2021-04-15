@@ -170,7 +170,7 @@ apply(Direction.Recall, 2, sd)
 anova.data2 = anova.data1[ , -2]
 anova.data2 = anova.data2[ , c(1,3,2)]
 
-Task.Recall = cast(anova.data2, Username ~ Task, mean)
+Task.Recall = cast(anova.data1, Username ~ Task, mean)
 
 apply(Task.Recall, 2, mean, na.rm = T)
 apply(Task.Recall, 2, sd, na.rm = T)
@@ -181,9 +181,27 @@ Task.Recall.FREQ = na.omit(Task.Recall[ , c(1, 3)])
 Task.Recall.Study = na.omit(Task.Recall[ , c(1, 4)])
 
 #For interaction
-JOL.Recall = cast(sub6[ , -4], Username ~ Direction, mean)
-FREQ.Recall = cast(sub7[ , -4], Username ~ Direction, mean)
-Study.Recall = cast(sub8[ , -4], Username ~ Direction, mean)
+JOL.Recall = cast(sub6[ , -5], Username ~ Direction, mean)
+FREQ.Recall = cast(sub7[ , -5], Username ~ Direction, mean)
+Study.Recall = cast(sub8[ , -5], Username ~ Direction, mean)
+
+#jol
+apply(JOL.Recall[ , -1], 2, mean)
+x = apply(JOL.Recall[ , -1], 2, sd)
+
+x / sqrt(length(unique(JOL.Recall$Username))) * 1.96
+
+#FREQ
+apply(FREQ.Recall[ , -1], 2, mean)
+x = apply(FREQ.Recall[ , -1], 2, sd)
+
+x / sqrt(length(unique(FREQ.Recall$Username))) * 1.96
+
+#NO-JOL
+apply(Study.Recall[ , -1], 2, mean)
+x = apply(Study.Recall[ , -1], 2, sd)
+
+x / sqrt(length(unique(Study.Recall$Username))) * 1.96
 
 ##Get means for main effects
 #main effect of Direction
