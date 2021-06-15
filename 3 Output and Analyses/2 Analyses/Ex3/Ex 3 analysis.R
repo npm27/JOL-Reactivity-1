@@ -161,7 +161,7 @@ aovEffectSize(model1, effectSize = "pes")
 
 ##Set up for posthocs
 #main effect of direction
-Direction.Recall = cast(anova.data1[ , -4], Username ~ Direction, mean)
+Direction.Recall = cast(anova.data1[ , -5], Username ~ Direction, mean)
 
 apply(Direction.Recall, 2, mean)
 apply(Direction.Recall, 2, sd)
@@ -649,7 +649,6 @@ temp$statistic
 ##IOC
 #write.csv(IOC2, file = "Diss Ex 1 Graphs/IOC.csv", row.names = F)
 
-
-
-
-
+#check sds
+tapply(JOL$Response.JOL, JOL$Direction, sd, na.rm = T)
+tapply(FREQ$Response.FREQ, FREQ$Direction, sd, na.rm = T)

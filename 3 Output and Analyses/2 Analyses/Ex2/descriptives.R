@@ -608,3 +608,9 @@ ezANOVA(pbic3,
         between = task,
         type = 3,
         detailed = T)
+
+##get sds
+tapply(JOL$Response.JOL, JOL$Direction, sd, na.rm = T)
+tapply(as.numeric(JAM$Response.JOL), JAM$Direction, sd, na.rm = T)
+
+sd(IOC_JOLs2$U)

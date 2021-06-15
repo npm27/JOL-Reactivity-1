@@ -496,3 +496,6 @@ modelb = ezANOVA(pbic,
                  type = 3,
                  detailed = T)
 modelb
+
+##Check sds for JOLs in related vs unrelated
+tapply(JOL$Response.JOL, JOL$Direction, sd, na.rm = T)

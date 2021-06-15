@@ -569,3 +569,5 @@ modelb = ezANOVA(pbic,
                  detailed = T)
 modelb
 
+#check sds
+tapply(JOL$Response.JOL, JOL$Direction, sd, na.rm = T)
