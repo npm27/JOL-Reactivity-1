@@ -1,11 +1,11 @@
-####ex 2 rt stuff####
+####This is now Experiment 4####
 library(reshape)
 library(ez)
 
-JOL = read.csv("Scored Output/JOL2.csv")
-RL = read.csv("Scored Output/Study.RL.csv")
-VC = read.csv("Scored Output/VC.csv")
-Study = read.csv("Scored Output/Study2.csv")
+JOL = read.csv("JOL2.csv")
+RL = read.csv("Study.RL.csv")
+VC = read.csv("VC.csv")
+Study = read.csv("Study2.csv")
 options(scipen = 999)
 
 ##Fix column names

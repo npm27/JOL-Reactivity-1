@@ -2,8 +2,8 @@
 library(reshape)
 library(ez)
 
-JOL = read.csv("Scored Output/JOL3.csv")
-Study = read.csv("Scored Output/Study3.csv")
+JOL = read.csv("JOL3.csv")
+Study = read.csv("Study3.csv")
 options(scipen = 999)
 
 ##Let's take a look at the data
