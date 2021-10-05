@@ -1,8 +1,8 @@
 ####Set up####
 ##load in data
-JOL = read.csv("Scored Output/JOL.csv")
-Study = read.csv("Scored Output/Study.csv")
-FREQ = read.csv("Scored Output/FREQ.csv")
+JOL = read.csv("JOL.csv")
+Study = read.csv("Study.csv")
+FREQ = read.csv("FREQ.csv")
 
 ##load libraries
 library(reshape)
@@ -52,7 +52,7 @@ anova.data1 = rbind(sub6, sub7, sub8)
 
 tapply(anova.data1$RT, anova.data1$Task, mean)
 tapply(anova.data1$RT, anova.data1$Direction, mean)
-tapply(anova.data1$RT, list(anova.data1$Task, anova.data2$Direction), mean)
+tapply(anova.data1$RT, list(anova.data1$Task, anova.data1$Direction), mean)
 
 stuff = tapply(anova.data1$RT, list(anova.data1$Task, anova.data2$Direction), sd)
 
