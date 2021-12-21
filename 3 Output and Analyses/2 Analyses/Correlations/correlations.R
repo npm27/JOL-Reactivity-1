@@ -3,6 +3,7 @@
 library(readxl)
 library(reshape)
 library(psych)
+library(Hmisc)
 
 #READ IN DATA
 JOL1 = read_xlsx("Correlations.xlsx", sheet = "JOL1")
@@ -27,6 +28,8 @@ dat$Stimuli.Answer = tolower(dat$Stimuli.Answer)
 
 ##get mean ratings for each item by task
 dat2 = cast(dat[ , c(1, 2, 3, 5, 6, 4)], Stimuli.Answer ~ TASK, mean, na.rm = T)
+  
+cor(dat2)
 
-##run the correlation
-cor(dat2[ , c(2:4)])
+##can we get p-values?
+rcorr(as.matrix(dat2))
