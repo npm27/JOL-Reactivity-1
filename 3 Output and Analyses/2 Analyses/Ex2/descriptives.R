@@ -188,11 +188,13 @@ t = temp$statistic
 SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 temp
 
-temp = t.test(long.JOL$B, long.read$B, paired = F, p.adjust.methods = "Bonferroni", var.equal = T)
+temp = t.test(long.JOL$B, long.read$B, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 p = round(temp$p.value, 3)
 t = temp$statistic
 SEM = (temp$conf.int[2] - temp$conf.int[1]) / 3.92
 temp
+
+p.adjust(p, method = "BY", n = 3)
 
 ##eff size
 mean(long.JOL$B);mean(long.read$B)

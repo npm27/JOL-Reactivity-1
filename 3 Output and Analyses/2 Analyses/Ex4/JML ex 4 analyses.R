@@ -137,7 +137,7 @@ PBICMODEL
 tapply(Anova.data$Recall_Score, Anova.data$Direction, mean)
 
 ##Set up data for t-tests and cohen's d/CIs for table
-Direction = cast(Anova.data[ , -4], Username ~ Direction, mean)
+Direction = cast(Anova.data[ , -5], Username ~ Direction, mean)
 
 #Get the sds
 bd = sd(Direction$B)
@@ -291,10 +291,10 @@ temp$statistic
 tapply(Anova.data$Recall_Score, list(Anova.data$Encoding, Anova.data$Direction), mean)
 
 ##Set up data for interaction
-JOL3 = JOL3[ , -4]
-RL3 = RL3[ , -4]
-VC3 = VC3[ , -4]
-Study3 = Study3[ , -4]
+JOL3 = JOL3[ , -5]
+RL3 = RL3[ , -5]
+VC3 = VC3[ , -5]
+Study3 = Study3[ , -5]
 
 JOL4 = cast(JOL3, Username ~ Direction, mean)
 RL4 = cast(RL3, Username ~ Direction, mean)

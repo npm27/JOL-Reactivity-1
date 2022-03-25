@@ -332,15 +332,15 @@ tapply(reactivity_data$Recall_Score, reactivity_data$Direction, mean)
 tapply(reactivity_data$Recall_Score, list(reactivity_data$Task, reactivity_data$Direction), mean)
 
 ##Set up data for t-tests
-reactivity2 = cast(reactivity_data[ , -4], Username ~ Direction, mean)
+reactivity2 = cast(reactivity_data[ , -5], Username ~ Direction, mean)
 
 reactivity3 = subset(reactivity_data,
                      reactivity_data$Task == "JOL")
 reactivity4 = subset(reactivity_data,
                      reactivity_data$Task == "Study")
 
-jol.ph = cast(reactivity3[ , -4], Username ~ Direction, mean)
-study.ph = cast(reactivity4[ , -4], Username ~ Direction, mean)
+jol.ph = cast(reactivity3[ , -5], Username ~ Direction, mean)
+study.ph = cast(reactivity4[ , -5], Username ~ Direction, mean)
 
 ##Sds for direction main effect
 apply(reactivity2, 2, sd)
@@ -455,29 +455,30 @@ temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Sig
 
 ##Interaction
+
 #F vs F
-temp = t.test(jol.ph$F, study.ph$F, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(jol.ph$F, study.ph$F, paired = F, p.adjust.methods = "bonferroni", n = 4, var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Sig
 
 #B vs B
-temp = t.test(jol.ph$B, study.ph$B, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(jol.ph$B, study.ph$B, paired = F, p.adjust.methods = "bonferroni", n = 4, var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Sig
 
 #S vs S
-temp = t.test(jol.ph$S, study.ph$S, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(jol.ph$S, study.ph$S, paired = F, p.adjust.methods = "bonferroni", n = 4, var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Sig
 
 #U vs U
-temp = t.test(jol.ph$U, study.ph$U, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(jol.ph$U, study.ph$U, paired = F, p.adjust.methods = "bonferroni", n = 4, var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic

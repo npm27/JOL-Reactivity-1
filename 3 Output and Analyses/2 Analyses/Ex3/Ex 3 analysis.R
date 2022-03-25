@@ -465,6 +465,8 @@ round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Significant!
 
+p.adjust(temp$p.value, method = "BY", n = 3)
+
 ##Symmetrical Pairs
 #JOLs vs FREQ
 temp = t.test(JOL.Recall$S, FREQ.Recall$S, paired = F, p.adjust.methods = "bonferroni")
