@@ -463,9 +463,11 @@ temp = t.test(FREQ.Recall$B, Study.Recall$B, paired = F, p.adjust.methods = "bon
 temp
 round(temp$p.value, 3)
 temp$statistic
-(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Significant!
+(temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Marginal!
 
 p.adjust(temp$p.value, method = "BY", n = 3)
+
+##do the pbic here
 
 ##Symmetrical Pairs
 #JOLs vs FREQ
