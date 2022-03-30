@@ -128,7 +128,7 @@ rcorr(as.matrix(temp))
 temp$JOL = ex2$JOL
 
 ##write to file for plots
-write.csv(temp, file = "related.csv", row.names = F)
+#write.csv(temp, file = "related.csv", row.names = F)
 
 ##Now do unrelated
 dat5 = rbind(JOL1_U, JOL2_U, JOL3_U, JOL4_U, JAM_U, FREQ_U)
@@ -171,4 +171,4 @@ rcorr(as.matrix(temp))
 temp$JOL = ex2$JOL
 
 ##write to file for plots
-write.csv(temp, file = "unrelated.csv", row.names = F)
+#write.csv(temp, file = "unrelated.csv", row.names = F)
