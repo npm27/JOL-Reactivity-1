@@ -469,6 +469,8 @@ round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Sig
 
+p.adjust(temp$p.value, method = "bonferroni", n = 3)
+
 ###unrelated
 ##Jol vs RL
 temp = t.test(JOL4$U, RL4$U, paired = F, p.adjust.methods = "bonferroni")
