@@ -452,14 +452,14 @@ temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Non-Sig
 
 #JOLs vs Study
-temp = t.test(JOL.Recall$B, Study.Recall$B, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(JOL.Recall$B, Study.Recall$B, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
 (temp$conf.int[2] - temp$conf.int[1]) / 3.92 #Significant!
 
 #FREQ vs Study
-temp = t.test(FREQ.Recall$B, Study.Recall$B, paired = F, p.adjust.methods = "bonferroni")
+temp = t.test(FREQ.Recall$B, Study.Recall$B, paired = F, p.adjust.methods = "bonferroni", var.equal = T)
 temp
 round(temp$p.value, 3)
 temp$statistic
@@ -468,7 +468,22 @@ temp$statistic
 p.adjust(temp$p.value, method = "BY", n = 3)
 
 ##do the pbic here
+pbic1 = FREQ.Recall[ , c(1:2)]
+colnames(pbic1)[2] = "score"
+pbic1$type = rep("freq")
 
+pbic2 = Study.Recall[ , c(1:2)]
+colnames(pbic2)[2] = "score"
+pbic2$type = rep("none")
+
+pbic3 = rbind(pbic1, pbic2)
+
+ezANOVA(pbic3,
+        dv = score,
+        between = type,
+        wid = Username,
+        detailed = T)
+ 
 ##Symmetrical Pairs
 #JOLs vs FREQ
 temp = t.test(JOL.Recall$S, FREQ.Recall$S, paired = F, p.adjust.methods = "bonferroni")

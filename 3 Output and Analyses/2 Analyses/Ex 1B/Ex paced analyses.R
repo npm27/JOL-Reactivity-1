@@ -19,6 +19,8 @@ colnames(JOL)[19] = "Response.JOL"
 colnames(JOL)[6] = "Recall_Score"
 colnames(Study)[6] = "Recall_Score"
 
+#colnames(JOL)[1:3] = c("thing", "thing2", "thing3") #Rename multiple columns. Columns must be next to each other in the dataframe!
+
 #get JOLs and Recall on same scale
 JOL$Recall_Score = JOL$Recall_Score * 100
 Study$Recall_Score = Study$Recall_Score * 100
@@ -26,7 +28,7 @@ Study$Recall_Score = Study$Recall_Score * 100
 #Fix out of range JOLs
 JOL$Response.JOL = as.numeric(JOL$Response.JOL)
 
-JOL$Response.JOL[JOL$Response.JOL > 100] = NA
+JOL$Response.JOL[JOL$Response.JOL > 100] = NA #> greater, < less, == equals, != not equal
 
 #table(JOL$Response.JOL)
 
@@ -38,7 +40,7 @@ colnames(Study)[12] = "Direction"
 length(unique(JOL$id)) #52
 length(unique(Study$id)) #59
 
-#Drop unused columns
+#Drop unused columns w/ indexing
 JOL1 = JOL[ , -c(1, 3:5, 7:11, 13:18, 20:21)] #Will use this one for IOC
 JOL2 = JOL[ , -c(1, 3:5, 7:11, 13:21)] #Will use this one for reactivity
 
@@ -51,13 +53,13 @@ reactivity_data = rbind(Study, JOL2)
 
 ##get descriptives
 ##Jol
-tapply(JOL1$Response.JOL, JOL1$Direction, mean, na.rm = T)
+tapply(JOL1$Response.JOL, JOL1$Direction, mean, na.rm = T) #DV, IV (grouping variable), function, remove NAs
 tapply(JOL2$Recall_Score, JOL2$Direction, mean, na.rm = T)
 
 #Study
 tapply(Study$Recall_Score, Study$Direction, mean, na.rm = T)
 
-####Clean the data#### ##STOPED HERE##
+####Clean the data####
 ##First check for outliers
 jols.ratings = cast(JOL1, id ~ Direction, mean, na.rm = T)
 jols.ratings2 = scale(jols.ratings) #a few close ones, but no real outliers here
@@ -77,6 +79,10 @@ reactivity_data = subset(reactivity_data,
                          reactivity_data$id != "w10122762_blm")
 reactivity_data = subset(reactivity_data,
                          reactivity_data$id != "W10129411_WB")
+
+#reactivity_data = subset(reactivity_data,
+#                         reactivity_data$id != "W10129411_WB" & reactivity_data$id != "w10122762_blm"
+#                         & reactivity_data$id != "w10122668_asr") #Can also combine it like this
 
 #remove from IOC
 JOL1 = subset(JOL1,
@@ -107,7 +113,7 @@ JOL1 = subset(JOL1,
 
 
 #drop na's and get means again
-JOL1 = na.omit(JOL1)
+JOL1 = na.omit(JOL1) #na omit removes missing data
 reactivity_data = na.omit(reactivity_data)
 
 ##IOC
